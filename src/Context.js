@@ -62,7 +62,6 @@ function ProductProvider(props) {
         const product= getItem(id);
         setModalProduct(product);
         setModalOpen(true);
-        console.log(modalOpen)
 
     }
 
@@ -90,7 +89,7 @@ function ProductProvider(props) {
         const product= tempCart[index];
 
         product.count-=1;
-        debugger;
+
         if(product.count===0){
             removeItem(id);
         }else{
