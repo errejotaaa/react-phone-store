@@ -5,7 +5,8 @@ import EmptyCart from './EmptyCart';
 import {ProductConsumer} from '../../Context'
 import CartList from './CartLists';
 import CartTotals from './CartTotals';
-function Cart(){
+
+function Cart(props){
     
     return(
         <section>
@@ -18,7 +19,7 @@ function Cart(){
                                 <Title name="your" title="cart"/>
                                 <CartColumns/> 
                                 <CartList value={value}/>
-                                <CartTotals value={value}/>
+                                <CartTotals value={value} history={props.history}/>
                             </React.Fragment>
                             );
                     }else{
