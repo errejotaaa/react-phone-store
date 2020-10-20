@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import { useTheme } from 'styled-components';
 import {storeProducts, detailProduct} from './data';
 
 const ProductContext= React.createContext();
@@ -122,8 +121,8 @@ function ProductProvider(props) {
 
     const addTotals=()=>{
         let subtotal=0;
-        cart.map(item=>{subtotal+=item.total;
-        });
+        cart.map(item=>(subtotal+=item.total
+        ));
         const tempTax= subtotal*0.1;
         const tax=parseFloat(tempTax.toFixed(2));
         const total= subtotal+tax;
